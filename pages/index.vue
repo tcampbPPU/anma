@@ -41,15 +41,6 @@ const markers = [
     },
     rating: 7,
   },
-  {
-    id: 2,
-    name: 'Halcyon Coffee Bar',
-    position: {
-      lat: 40.448373232292894,
-      lng: -80.00001018811726,
-    },
-    rating: 10,
-  },
 ] as models.Markers
 
 
