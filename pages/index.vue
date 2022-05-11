@@ -7,8 +7,9 @@
           style="width: 100%; height: 80vh"
           :center="center"
           :zoom="12"
+          :fullscreen-control="false"
         >
-          <Marker v-for="mark in markers" :key="mark.id" :options="{ position: mark.position }">
+          <Marker v-for="mark in filteredMarkers" :key="mark.id" :options="{ position: mark.position }">
             <info-window>
               <span class="text-2xl font-bold text-black">{{ mark.name }}</span>
             </info-window>
@@ -20,6 +21,7 @@
 </template>
 
 <script lang="ts" setup>
+import { Ref } from '@vue/runtime-core'
 import { GoogleMap, InfoWindow, Marker } from 'vue3-google-map'
 
 const config = useRuntimeConfig()
@@ -35,6 +37,7 @@ const markers = [
   {
     id: 1,
     name: 'Halcyon Coffee Bar',
+    episode: 1,
     position: {
       lat: 30.29775802195116,
       lng: -97.70535262534085,
@@ -43,5 +46,13 @@ const markers = [
   },
 ] as models.Markers
 
+
+const filter = ref(undefined) as Ref<number | undefined>
+
+const filteredMarkers = computed((): models.Markers => {
+  if (!filter.value)
+    return markers
+  return markers.filter(mark => mark.episode === filter.value)
+})
 
 </script>

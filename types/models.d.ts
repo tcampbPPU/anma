@@ -4,8 +4,9 @@ declare global {
 
     export interface Marker {
       id: number
+      episode: number
       name: string
-      rating: float
+      rating?: float
       position: {
         lat: float
         lng: float
