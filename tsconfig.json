@@ -1,0 +1,20 @@
+{
+  // https://v3.nuxtjs.org/concepts/typescript
+  "extends": "./.nuxt/tsconfig.json",
+  "compilerOptions": {
+    "types": [
+      "nuxt-windicss"
+    ],
+    "paths": {
+      "~/*": [
+        "./*"
+      ]
+    }
+  },
+  "vueCompilerOptions": {
+    "experimentalCompatMode": 2
+  },
+  "exclude": [
+    "node_modules"
+  ],
+}
