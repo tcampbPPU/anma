@@ -50,7 +50,7 @@ const markers = [
     },
     rating: 10,
   },
-]
+] as models.Markers
 
 
 </script>
