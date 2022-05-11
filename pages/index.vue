@@ -6,7 +6,7 @@
           :api-key="config.public.googleMapsApiKey"
           style="width: 100%; height: 80vh"
           :center="center"
-          :zoom="15"
+          :zoom="12"
         >
           <Marker v-for="mark in markers" :key="mark.id" :options="{ position: mark.position }">
             <info-window>
