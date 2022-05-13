@@ -21,9 +21,9 @@
 </template>
 
 <script lang="ts" setup>
-import GMap from '~/components/maps/GMap.vue'
-import MapMarker from '~/components/maps/MapMarker.vue'
-import MarkerWindow from '~/components/maps/MarkerWindow.vue'
+import GMap from '~/components/map/GMap.vue'
+import MapMarker from '~/components/map/MapMarker.vue'
+import MarkerWindow from '~/components/map/MarkerWindow.vue'
 
 const config = useRuntimeConfig()
 
@@ -41,6 +41,26 @@ const markers = [
     episode: 1,
     position: {
       lat: 30.29775802195116,
+      lng: -97.70535262534085,
+    },
+    rating: 7,
+  },
+  {
+    id: 2,
+    name: 'Halcyon Coffee Bar',
+    episode: 1,
+    position: {
+      lat: 31.29775802195116,
+      lng: -97.70535262534085,
+    },
+    rating: 7,
+  },
+  {
+    id: 3,
+    name: 'Halcyon Coffee Bar',
+    episode: 1,
+    position: {
+      lat: 29.29775802195116,
       lng: -97.70535262534085,
     },
     rating: 7,
