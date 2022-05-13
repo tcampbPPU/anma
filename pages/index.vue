@@ -2,27 +2,28 @@
   <div>
     <div class="container flex flex-col p-2 mx-auto lg:p-8">
       <client-only>
-        <google-map
+        <g-map
           :api-key="config.public.googleMapsApiKey"
-          style="width: 100%; height: 80vh"
           :center="center"
-          :zoom="12"
-          :fullscreen-control="false"
+          theme="aubergine"
         >
-          <Marker v-for="mark in filteredMarkers" :key="mark.id" :options="{ position: mark.position }">
-            <info-window>
-              <span class="text-2xl font-bold text-black">{{ mark.name }}</span>
-            </info-window>
-          </Marker>
-        </google-map>
+          <map-marker :markers="markers">
+            <template #mark="{ mark }">
+              <marker-window>
+                <span class="text-2xl font-bold text-black">{{ mark.name }}</span>
+              </marker-window>
+            </template>
+          </map-marker>
+        </g-map>
       </client-only>
     </div>
   </div>
 </template>
 
 <script lang="ts" setup>
-import { Ref } from '@vue/runtime-core'
-import { GoogleMap, InfoWindow, Marker } from 'vue3-google-map'
+import GMap from '~/components/maps/GMap.vue'
+import MapMarker from '~/components/maps/MapMarker.vue'
+import MarkerWindow from '~/components/maps/MarkerWindow.vue'
 
 const config = useRuntimeConfig()
 
@@ -45,14 +46,5 @@ const markers = [
     rating: 7,
   },
 ] as models.Markers
-
-
-const filter = ref(undefined) as Ref<number | undefined>
-
-const filteredMarkers = computed((): models.Markers => {
-  if (!filter.value)
-    return markers
-  return markers.filter(mark => mark.episode === filter.value)
-})
 
 </script>

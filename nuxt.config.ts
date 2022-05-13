@@ -23,9 +23,13 @@ export default defineNuxtConfig({
 
  /**
   * Auto import components
-  * @see https://nuxtjs.org/api/configuration-components
+  * @see https://v3.nuxtjs.org/api/configuration/nuxt.config#components
   */
-  components: true,
+  components: {
+    'dirs': [
+      '~/components',
+    ],
+  },
 
   /**
    * @see https://v3.nuxtjs.org/api/configuration/nuxt.config#modules

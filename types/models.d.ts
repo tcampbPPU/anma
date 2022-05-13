@@ -11,8 +11,15 @@ declare global {
         lat: float
         lng: float
       }
+      label?: string
+      title?: string
     }
     export type Markers = Array<Marker>
+
+    export interface Coordinates {
+      lat: float
+      lng: float
+    }
 
   }
 }
