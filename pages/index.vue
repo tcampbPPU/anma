@@ -40,16 +40,18 @@
               :center="center"
               :theme="theme"
             >
-              <map-marker
-                :markers="markers"
-                :filter="filter"
-              >
-                <template #mark="{ mark }">
-                  <marker-window>
-                    <span class="text-2xl font-bold text-black">{{ mark.name }}</span>
-                  </marker-window>
-                </template>
-              </map-marker>
+              <marker-cluster>
+                <map-marker
+                  :markers="markers"
+                  :filter="filter"
+                >
+                  <template #mark="{ mark }">
+                    <marker-window>
+                      <span class="text-2xl font-bold text-black">{{ mark.name }}</span>
+                    </marker-window>
+                  </template>
+                </map-marker>
+              </marker-cluster>
             </g-map>
           </client-only>
         </main>
@@ -60,6 +62,7 @@
 
 <script lang="ts" setup>
 import GMap from '~/components/map/GMap.vue'
+import MarkerCluster from '~/components/map/MarkerCluster.vue'
 import MapMarker from '~/components/map/MapMarker.vue'
 import MarkerWindow from '~/components/map/MarkerWindow.vue'
 import MenuSide from '~/components/layout/MenuSide.vue'
