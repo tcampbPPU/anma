@@ -1,11 +1,25 @@
 <template>
   <div>
     <div class="container flex flex-col p-2 mx-auto lg:p-8">
+      <div class="flex flex-row-reverse pb-2">
+        <select
+          v-model="theme"
+          class="z-20 w-1/4 bg-white border divide-y divide-gray-100 rounded-md shadow-lg dark:border-gray-700 dark:bg-gray-900 dark:divide-gray-600"
+        >
+          <option
+            v-for="t in themes"
+            :key="t"
+            :value="t"
+          >
+            {{ t }}
+          </option>
+        </select>
+      </div>
       <client-only>
         <g-map
           :api-key="config.public.googleMapsApiKey"
           :center="center"
-          theme="aubergine"
+          :theme="theme"
         >
           <map-marker :markers="markers">
             <template #mark="{ mark }">
@@ -66,5 +80,8 @@ const markers = [
     rating: 7,
   },
 ] as models.Markers
+
+const themes = ['default', 'aubergine', 'dark', 'retro']
+const theme = ref<'default'|'aubergine'|'dark'|'retro'>('default')
 
 </script>

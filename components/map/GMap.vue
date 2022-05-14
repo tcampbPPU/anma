@@ -44,4 +44,6 @@ const props = defineProps({
 
 const theme = ref(useTheme(props.theme))
 
+watch(() => props.theme, (val) => theme.value = useTheme(val))
+
 </script>
