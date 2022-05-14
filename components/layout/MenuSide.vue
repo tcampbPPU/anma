@@ -1,5 +1,5 @@
 <template>
-  <div class="flex h-screen overflow-hidden bg-gray-100 dark:bg-gray-900">
+  <div class="flex bg-gray-100 dark:bg-gray-900">
     <div
       :class="closed ? 'hidden' : null"
       aria-modal="true"
@@ -53,7 +53,7 @@
 import LeftArrow from '~/components/icon/LeftArrow.vue'
 import RightArrow from '~/components/icon/RightArrow.vue'
 
-const closed = ref(true)
+const closed = ref(false)
 const toggle = () => closed.value = !closed.value
 </script>
 

@@ -1,5 +1,5 @@
 <template>
-  <div class="leftscroll h-[85vh]">
+  <div class="leftscroll h-[80vh]">
     <slot />
   </div>
 </template>

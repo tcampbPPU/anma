@@ -2,13 +2,21 @@
   <div>
     <menu-side>
       <template #aside>
-        <left-scroll>
-          <div v-for="i in 100" :key="i">
-            <p class="mb-2 pl-4 cursor-pointer">
-              {{ i }}
-            </p>
-          </div>
-        </left-scroll>
+        <span class="pl-2 text-sm align-middle text-gray-200 dark:text-gray-600">Click on an episode to apply filter</span>
+        <div class="flex">
+          <left-scroll>
+            <div v-for="episode in episodes" :key="episode.id">
+              <p class="mb-2 pl-4 cursor-pointer" @click="setFilter(episode.id)">
+                {{ episode.name }}
+              </p>
+            </div>
+            <!-- <div v-for="i in 100" :key="i">
+              <p class="mb-2 pl-4 cursor-pointer">
+                {{ i }}
+              </p>
+            </div> -->
+          </left-scroll>
+        </div>
       </template>
       <template #main>
         <main class="container flex flex-col w-full p-2 mx-auto lg:p-8">
@@ -32,7 +40,10 @@
               :center="center"
               :theme="theme"
             >
-              <map-marker :markers="markers">
+              <map-marker
+                :markers="markers"
+                :filter="filter"
+              >
                 <template #mark="{ mark }">
                   <marker-window>
                     <span class="text-2xl font-bold text-black">{{ mark.name }}</span>
@@ -62,6 +73,17 @@ const center = {
   lng: -97.74228103200021,
 }
 
+const episodes = [
+  {
+    id: 1,
+    name: 'Episode 1',
+  },
+  {
+    id: 2,
+    name: 'Episode 2',
+  },
+]
+
 // Markers of Coffee Shops
 const markers = [
   {
@@ -87,7 +109,7 @@ const markers = [
   {
     id: 3,
     name: 'Halcyon Coffee Bar',
-    episode: 1,
+    episode: 2,
     position: {
       lat: 29.29775802195116,
       lng: -97.70535262534085,
@@ -98,5 +120,13 @@ const markers = [
 
 const themes = ['default', 'night', 'hazy', 'groovy', 'moonlight', 'minimal']
 const theme = ref<'default'|'night'|'hazy'|'groovy'|'moonlight'|'minimal'>('default')
+const filter = ref<number|undefined>(undefined)
+
+const setFilter = (id: number) => {
+  if (filter.value === id)
+    filter.value = undefined
+  else
+    filter.value = id
+}
 
 </script>
