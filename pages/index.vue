@@ -6,8 +6,11 @@
         <div class="flex">
           <left-scroll>
             <div v-for="episode in episodes" :key="episode.id">
-              <p class="pl-4 mb-2 cursor-pointer" @click="setFilter(episode.id)">
-                {{ episode.name }}
+              <p class="flex flex-row-reverse pl-4 mb-2 space-x-2 cursor-pointer hover:underline" @click="setFilter(episode.id)">
+                <span>{{ episode.name }}</span>
+                <span v-if="episode.id === filter">
+                  <column-filter />
+                </span>
               </p>
             </div>
           </left-scroll>
@@ -37,13 +40,13 @@
             >
               <span v-for="filteredShop in filteredShops" :key="filteredShop.id">
                 <span v-for="shop in filteredShop.shops" :key="shop.id">
-                  <shop-marker :position="shop.position">
+                  <shop-marker :position="shop.position" :label="`${parseInt(shop.episode)}`">
                     <marker-window>
                       <marker-modal :shop="shop" />
                     </marker-window>
                   </shop-marker>
                   <span v-for="marker, i in shop.other_locations" :key="i">
-                    <shop-marker :position="marker.position">
+                    <shop-marker :position="marker.position" :label="`${parseInt(shop.episode)}`">
                       <marker-window>
                         <marker-modal :shop="shop" />
                       </marker-window>
@@ -67,6 +70,7 @@ import MenuSide from '~/components/layout/MenuSide.vue'
 import LeftScroll from '~/components/layout/LeftScroll.vue'
 import ShopMarker from '~/components/shop/ShopMarker.vue'
 import MarkerModal from '~/components/shop/MarkerModal.vue'
+import ColumnFilter from '~/components/icon/ColumnFilter.vue'
 
 const config = useRuntimeConfig()
 
