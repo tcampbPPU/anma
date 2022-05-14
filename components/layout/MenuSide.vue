@@ -32,7 +32,7 @@
         :class="closed ? 'w-12' : 'w-60'"
       >
         <div class="flex flex-col flex-grow pt-5 pb-4 bg-gray-100 dark:border-gray-700 dark:bg-gray-900">
-          <span class="flex justify-end mr-3" @click="toggle">
+          <span class="flex justify-end mr-3 cursor-pointer" @click="toggle">
             <left-arrow v-if="!closed" />
             <right-arrow v-else />
           </span>

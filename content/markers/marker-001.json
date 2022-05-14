@@ -1,0 +1,31 @@
+{
+  "id": 1,
+  "episode": "001",
+  "shops": [
+    {
+      "id": 1,
+      "order": 1,
+      "episode": "001",
+      "name": "Halcyon Coffee Bar",
+      "address": "1905 Aldrich Street, #110 Austin, TX 78723",
+      "position": {
+        "lat": 30.29775802195116,
+        "lng": -97.70535262534085
+      },
+      "ratings": {
+        "gus": "7.0",
+        "geoff": "7.0",
+        "average": "7.0"
+      },
+      "other_locations": [
+        {
+          "address": "218 W 4th St Austin, TX 78701",
+          "position": {
+            "lat": 30.267050890151644,
+            "lng": -97.74563623008639
+          }
+        }
+      ]
+    }
+  ]
+}

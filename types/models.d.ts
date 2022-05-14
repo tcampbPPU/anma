@@ -21,5 +21,15 @@ declare global {
       lng: float
     }
 
+    export interface Episode {
+      id: number
+      title: string
+      episode: string|number
+      year: number
+      date: Date
+      description: string
+    }
+    export type Episodes = Array<Episode>
+
   }
 }

@@ -2,16 +2,16 @@
   <div>
     <menu-side>
       <template #aside>
-        <span class="pl-2 text-sm align-middle text-gray-200 dark:text-gray-600">Click on an episode to apply filter</span>
+        <span class="pb-2 pl-2 -mt-4 text-sm text-gray-200 align-middle dark:text-gray-600">Click on an episode to apply filter</span>
         <div class="flex">
           <left-scroll>
             <div v-for="episode in episodes" :key="episode.id">
-              <p class="mb-2 pl-4 cursor-pointer" @click="setFilter(episode.id)">
+              <p class="pl-4 mb-2 cursor-pointer" @click="setFilter(episode.id)">
                 {{ episode.name }}
               </p>
             </div>
             <!-- <div v-for="i in 100" :key="i">
-              <p class="mb-2 pl-4 cursor-pointer">
+              <p class="pl-4 mb-2 cursor-pointer">
                 {{ i }}
               </p>
             </div> -->
@@ -97,9 +97,19 @@ const markers = [
     rating: 7,
   },
   {
-    id: 2,
+    id: 1,
     name: 'Halcyon Coffee Bar',
     episode: 1,
+    position: {
+      lat: 30.266962926528826,
+      lng: -97.7456913147418,
+    },
+    rating: 7,
+  },
+  {
+    id: 2,
+    name: 'Halcyon Coffee Bar',
+    episode: 2,
     position: {
       lat: 31.29775802195116,
       lng: -97.70535262534085,
@@ -119,7 +129,7 @@ const markers = [
 ] as models.Markers
 
 const themes = ['default', 'night', 'hazy', 'groovy', 'moonlight', 'minimal']
-const theme = ref<'default'|'night'|'hazy'|'groovy'|'moonlight'|'minimal'>('default')
+const theme = ref<'default'|'night'|'hazy'|'groovy'|'moonlight'|'minimal'>('hazy')
 const filter = ref<number|undefined>(undefined)
 
 const setFilter = (id: number) => {
