@@ -36,7 +36,7 @@ const props = defineProps({
     default: false,
   },
   theme: {
-    type: String as PropType<'default'|'night'|'hazy'|'groovy'|'minimal'>,
+    type: String as PropType<'default'|'night'|'hazy'|'groovy'|'moonlight'|'minimal'>,
     required: false,
     default: 'default',
   },
