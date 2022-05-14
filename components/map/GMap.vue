@@ -42,7 +42,7 @@ const props = defineProps({
   },
 })
 
-const theme = ref<string>(useTheme(props.theme))
+const theme = ref(useTheme(props.theme))
 
 watch(() => props.theme, (val) => theme.value = useTheme(val))
 

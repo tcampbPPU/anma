@@ -2,7 +2,13 @@
   <div>
     <menu-side>
       <template #aside>
-        <!-- Aside -->
+        <left-scroll>
+          <div v-for="i in 100" :key="i">
+            <p class="mb-2 pl-4 cursor-pointer">
+              {{ i }}
+            </p>
+          </div>
+        </left-scroll>
       </template>
       <template #main>
         <main class="container flex flex-col w-full p-2 mx-auto lg:p-8">
@@ -46,6 +52,7 @@ import GMap from '~/components/map/GMap.vue'
 import MapMarker from '~/components/map/MapMarker.vue'
 import MarkerWindow from '~/components/map/MarkerWindow.vue'
 import MenuSide from '~/components/layout/MenuSide.vue'
+import LeftScroll from '~/components/layout/LeftScroll.vue'
 
 const config = useRuntimeConfig()
 

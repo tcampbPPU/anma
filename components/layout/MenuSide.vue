@@ -1,5 +1,5 @@
 <template>
-  <div class="flex h-screen overflow-hidden bg-gray-100 dark:bg-gray-900 scrollbar 3xl:mx-auto max-w-9xl">
+  <div class="flex h-screen overflow-hidden bg-gray-100 dark:bg-gray-900">
     <div
       :class="closed ? 'hidden' : null"
       aria-modal="true"
