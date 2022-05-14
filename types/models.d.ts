@@ -31,5 +31,34 @@ declare global {
     }
     export type Episodes = Array<Episode>
 
+    export interface Shop {
+      id: number
+      episode: string
+      shops: ShopItems
+    }
+    export type Shops = Array<Shop>
+
+    export interface ShopItem {
+      id: number
+      order: number
+      episode: string
+      name: string
+      address: string
+      position: Coordinates
+      rating: {
+        gus: float
+        geoff: float
+        average: float
+      }
+      other_locations: ShopLocations
+    }
+    export type ShopItems = Array<ShopItem>
+
+    export interface ShopLocation {
+      address: string
+      position: Coordinates
+    }
+    export type ShopLocations = Array<ShopLocation>
+
   }
 }

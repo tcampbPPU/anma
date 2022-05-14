@@ -40,18 +40,22 @@
               :center="center"
               :theme="theme"
             >
-              <marker-cluster>
-                <map-marker
-                  :markers="markers"
-                  :filter="filter"
-                >
-                  <template #mark="{ mark }">
+              <span v-for="shop in shops" :key="shop.id">
+                <span v-for="marker in shop.shops" :key="marker.id">
+                  <shop-marker :position="marker.position">
                     <marker-window>
-                      <span class="text-2xl font-bold text-black">{{ mark.name }}</span>
+                      <marker-modal :marker="marker" />
                     </marker-window>
-                  </template>
-                </map-marker>
-              </marker-cluster>
+                  </shop-marker>
+                  <span v-for="other, i in marker.other_locations" :key="i">
+                    <shop-marker :position="other.position">
+                      <marker-window>
+                        <marker-modal :marker="marker" />
+                      </marker-window>
+                    </shop-marker>
+                  </span>
+                </span>
+              </span>
             </g-map>
           </client-only>
         </main>
@@ -62,11 +66,11 @@
 
 <script lang="ts" setup>
 import GMap from '~/components/map/GMap.vue'
-import MarkerCluster from '~/components/map/MarkerCluster.vue'
-import MapMarker from '~/components/map/MapMarker.vue'
 import MarkerWindow from '~/components/map/MarkerWindow.vue'
 import MenuSide from '~/components/layout/MenuSide.vue'
 import LeftScroll from '~/components/layout/LeftScroll.vue'
+import ShopMarker from '~/components/shop/ShopMarker.vue'
+import MarkerModal from '~/components/shop/MarkerModal.vue'
 
 const config = useRuntimeConfig()
 
@@ -87,50 +91,6 @@ const episodes = [
   },
 ]
 
-// Markers of Coffee Shops
-const markers = [
-  {
-    id: 1,
-    name: 'Halcyon Coffee Bar',
-    episode: 1,
-    position: {
-      lat: 30.29775802195116,
-      lng: -97.70535262534085,
-    },
-    rating: 7,
-  },
-  {
-    id: 1,
-    name: 'Halcyon Coffee Bar',
-    episode: 1,
-    position: {
-      lat: 30.266962926528826,
-      lng: -97.7456913147418,
-    },
-    rating: 7,
-  },
-  {
-    id: 2,
-    name: 'Halcyon Coffee Bar',
-    episode: 2,
-    position: {
-      lat: 31.29775802195116,
-      lng: -97.70535262534085,
-    },
-    rating: 7,
-  },
-  {
-    id: 3,
-    name: 'Halcyon Coffee Bar',
-    episode: 2,
-    position: {
-      lat: 29.29775802195116,
-      lng: -97.70535262534085,
-    },
-    rating: 7,
-  },
-] as models.Markers
-
 const themes = ['default', 'night', 'hazy', 'groovy', 'moonlight', 'minimal']
 const theme = ref<'default'|'night'|'hazy'|'groovy'|'moonlight'|'minimal'>('hazy')
 const filter = ref<number|undefined>(undefined)
@@ -141,5 +101,39 @@ const setFilter = (id: number) => {
   else
     filter.value = id
 }
+
+const shops = [
+{
+  id: 1,
+  episode: '001',
+  shops: [
+    {
+      id: 1,
+      order: 1,
+      episode: '001',
+      name: 'Halcyon Coffee Bar',
+      address: '1905 Aldrich Street, #110 Austin, TX 78723',
+      position: {
+        lat: 30.29775802195116,
+        lng: -97.70535262534085,
+      },
+      rating: {
+        gus: '7.0',
+        geoff: '7.0',
+        average: '7.0',
+      },
+      other_locations: [
+        {
+          address: '218 W 4th St Austin, TX 78701',
+          position: {
+            lat: 30.267050890151644,
+            lng: -97.74563623008639,
+          },
+        },
+      ],
+    },
+  ],
+},
+] as models.Shops
 
 </script>
