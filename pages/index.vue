@@ -10,11 +10,6 @@
                 {{ episode.name }}
               </p>
             </div>
-            <!-- <div v-for="i in 100" :key="i">
-              <p class="pl-4 mb-2 cursor-pointer">
-                {{ i }}
-              </p>
-            </div> -->
           </left-scroll>
         </div>
       </template>
@@ -40,17 +35,17 @@
               :center="center"
               :theme="theme"
             >
-              <span v-for="shop in shops" :key="shop.id">
-                <span v-for="marker in shop.shops" :key="marker.id">
-                  <shop-marker :position="marker.position">
+              <span v-for="filteredShop in filteredShops" :key="filteredShop.id">
+                <span v-for="shop in filteredShop.shops" :key="shop.id">
+                  <shop-marker :position="shop.position">
                     <marker-window>
-                      <marker-modal :marker="marker" />
+                      <marker-modal :shop="shop" />
                     </marker-window>
                   </shop-marker>
-                  <span v-for="other, i in marker.other_locations" :key="i">
-                    <shop-marker :position="other.position">
+                  <span v-for="marker, i in shop.other_locations" :key="i">
+                    <shop-marker :position="marker.position">
                       <marker-window>
-                        <marker-modal :marker="marker" />
+                        <marker-modal :shop="shop" />
                       </marker-window>
                     </shop-marker>
                   </span>
@@ -135,6 +130,34 @@ const shops = [
     },
   ],
 },
+{
+  id: 2,
+  episode: '002',
+  shops:[
+    {
+      id: 2,
+      order: 1,
+      episode: '002',
+      name: 'Houndstooth coffee',
+      address: '401 Congress Ave #100c, Austin, TX 78701',
+      position: {
+        lat: 30.266406511622108,
+        lng: -97.74280121295327,
+      },
+      rating: {
+        gus: '7.0',
+        geoff: '7.0',
+        average: '7.0',
+      },
+    },
+  ],
+},
 ] as models.Shops
+
+const filteredShops = computed((): models.Shops => {
+  if (!filter.value)
+    return shops
+  return shops.filter(shop => shop.episode === filter.value.toString().padStart(3, '0'))
+})
 
 </script>

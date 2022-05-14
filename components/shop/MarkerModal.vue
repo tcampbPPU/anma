@@ -2,20 +2,20 @@
   <div>
     <div class="py-8 space-y-6 text-base leading-7 text-gray-600">
       <p>
-        {{ props.marker.name }}
+        {{ props.shop.name }}
       </p>
       <p>
-        Episode: {{ props.marker.episode }}
+        Episode: {{ props.shop.episode }}
       </p>
       <ul class="space-y-4">
-        <li v-for="(value, name, index) in props.marker.rating" :key="index" class="flex items-center">
+        <li v-for="(value, name, index) in props.shop.rating" :key="index" class="flex items-center">
           <p>
             {{ ucFirst(name) }}: {{ value }}
           </p>
         </li>
       </ul>
       <p>
-        {{ props.marker.address }}
+        {{ props.shop.address }}
       </p>
     </div>
   </div>
@@ -24,7 +24,7 @@
 import { PropType } from '@vue/runtime-core'
 import ucFirst from '~/composables/ucFirst'
 const props = defineProps({
-  marker: {
+  shop: {
     type: Object as PropType<models.ShopItem>,
     required: true,
   },
