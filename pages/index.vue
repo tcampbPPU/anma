@@ -149,6 +149,36 @@ const shops = [
         geoff: '7.0',
         average: '7.0',
       },
+      other_locations: [
+        {
+          address: '4200 N Lamar Blvd STE 120, Austin, TX 78756',
+          position: {
+            lat: 30.310579974993825,
+            lng: -97.74000446243984,
+          },
+        },
+        {
+          address: '2823 East MLK Blvd, Ste 101, Austin, TX 78702',
+          position: {
+            lat: 30.281461543184978,
+            lng: -97.70958437124027,
+          },
+        },
+        {
+          address: '11501 Rock Rose Ave Ste 118, Austin, TX 78758',
+          position: {
+            lat: 30.400638707979816,
+            lng: -97.7227962374137,
+          },
+        },
+        {
+          address: '2001 Ed Bluestein Blvd, Austin, TX 78721',
+          position: {
+            lat: 30.259750557102816,
+            lng: -97.67402351821713,
+          },
+        },
+      ],
     },
   ],
 },
