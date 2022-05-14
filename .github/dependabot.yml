@@ -1,0 +1,13 @@
+version: 2
+updates:
+  - package-ecosystem: "npm"
+    directory: "/"
+    schedule:
+      interval: "weekly"
+      day: "friday"
+    assignees:
+      - "tcampbPPU"
+    labels:
+      - "pnpm"
+      - "dependencies"
+    open-pull-requests-limit: 10

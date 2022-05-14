@@ -10,7 +10,6 @@ Create/Obtain Google Maps API Token
 Make sure to install the dependencies:
 
 ```bash
-# pnpm
 pnpm install --shamefully-hoist
 ```
 
