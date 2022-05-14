@@ -4,7 +4,7 @@
       <div class="flex flex-row-reverse pb-2">
         <select
           v-model="theme"
-          class="z-20 w-1/4 bg-white border divide-y divide-gray-100 rounded-md shadow-lg dark:border-gray-700 dark:bg-gray-900 dark:divide-gray-600"
+          class="z-20 w-full bg-white border divide-y divide-gray-100 rounded-md shadow-lg md:w-1/4 dark:border-gray-700 dark:bg-gray-900 dark:divide-gray-600"
         >
           <option
             v-for="t in themes"
