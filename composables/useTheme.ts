@@ -8,6 +8,7 @@ export default function useTheme(theme: string) {
 }
 
 const themes = {
+  default: [],
   aubergine:
     [
       {
