@@ -9,7 +9,7 @@ export default function useTheme(theme: string) {
 
 const themes = {
   default: [],
-  aubergine:
+  night:
     [
       {
         elementType: "geometry",
@@ -243,7 +243,7 @@ const themes = {
         ],
       },
     ],
-  dark: [
+  hazy: [
     { elementType: "geometry", stylers: [{ color: "#242f3e" }] },
     { elementType: "labels.text.stroke", stylers: [{ color: "#242f3e" }] },
     { elementType: "labels.text.fill", stylers: [{ color: "#746855" }] },
@@ -323,7 +323,7 @@ const themes = {
       stylers: [{ color: "#17263c" }],
     },
   ],
-  retro: [
+  groovy: [
     { elementType: "geometry", stylers: [{ color: "#ebe3cd" }] },
     { elementType: "labels.text.fill", stylers: [{ color: "#523735" }] },
     { elementType: "labels.text.stroke", stylers: [{ color: "#f5f1e6" }] },
