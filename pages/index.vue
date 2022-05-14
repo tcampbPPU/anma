@@ -2,7 +2,7 @@
   <div>
     <menu-side>
       <template #aside>
-        <span class="pb-2 pl-2 -mt-4 text-sm text-gray-200 align-middle dark:text-gray-600">Click on an episode to apply filter</span>
+        <span class="pb-2 pl-2 -mt-4 text-sm text-gray-600 align-middle">Click on an episode to apply filter</span>
         <div class="flex">
           <left-scroll>
             <div v-for="episode in episodes" :key="episode.id">
@@ -30,7 +30,7 @@
                 :key="t"
                 :value="t"
               >
-                {{ t }}
+                {{ ucFirst(t) }}
               </option>
             </select>
           </div>
@@ -65,6 +65,7 @@
 </template>
 
 <script lang="ts" setup>
+import ucFirst from '~/composables/ucFirst'
 import GMap from '~/components/map/GMap.vue'
 import MarkerWindow from '~/components/map/MarkerWindow.vue'
 import MenuSide from '~/components/layout/MenuSide.vue'

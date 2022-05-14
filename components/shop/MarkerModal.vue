@@ -10,7 +10,7 @@
       <ul class="space-y-4">
         <li v-for="(value, name, index) in props.marker.rating" :key="index" class="flex items-center">
           <p>
-            {{ name }}: {{ value }}
+            {{ ucFirst(name) }}: {{ value }}
           </p>
         </li>
       </ul>
@@ -22,6 +22,7 @@
 </template>
 <script lang="ts" setup>
 import { PropType } from '@vue/runtime-core'
+import ucFirst from '~/composables/ucFirst'
 const props = defineProps({
   marker: {
     type: Object as PropType<models.ShopItem>,
