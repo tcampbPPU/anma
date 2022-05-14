@@ -81,7 +81,7 @@ const markers = [
   },
 ] as models.Markers
 
-const themes = ['default', 'aubergine', 'dark', 'retro']
-const theme = ref<'default'|'aubergine'|'dark'|'retro'>('default')
+const themes = ['default', 'aubergine', 'dark', 'retro', 'minimal']
+const theme = ref<'default'|'aubergine'|'dark'|'retro'|'minimal'>('default')
 
 </script>
