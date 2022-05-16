@@ -45,7 +45,7 @@ declare global {
       name: string
       address: string
       position: Coordinates
-      rating: {
+      rating?: {
         gus: float
         geoff: float
         average: float
