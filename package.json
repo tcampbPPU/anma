@@ -14,7 +14,7 @@
     "vue3-google-map": "^0.11.0"
   },
   "devDependencies": {
-    "@typescript-eslint/eslint-plugin": "^5.23.0",
+    "@typescript-eslint/eslint-plugin": "^5.25.0",
     "@typescript-eslint/parser": "^5.23.0",
     "@vue/eslint-config-typescript": "^10.0.0",
     "@vueuse/nuxt": "^8.4.2",
