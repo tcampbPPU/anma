@@ -10,7 +10,7 @@ Create/Obtain Google Maps API Token
 Make sure to install the dependencies:
 
 ```bash
-pnpm install --shamefully-hoist
+yarn install
 ```
 
 ## Development Server
@@ -18,7 +18,7 @@ pnpm install --shamefully-hoist
 Start the development server on http://localhost:3000
 
 ```bash
-pnpm dev
+yarn dev
 ```
 
 ## Production
@@ -26,11 +26,11 @@ pnpm dev
 Build the application for production:
 
 ```bash
-pnpm build
+yarn build
 ```
 
 Locally preview production build:
 
 ```bash
-pnpm preview
+yarn preview
 ```

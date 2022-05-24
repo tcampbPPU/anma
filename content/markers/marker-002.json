@@ -1,0 +1,17 @@
+{
+  "id": 2,
+  "episode": "002",
+  "shops":[
+    {
+      "id": 2,
+      "order": 1,
+      "episode": "002",
+      "name": "Hank's Austin",
+      "address": "5811 Berkman Dr, Austin, TX 78723",
+      "position": {
+        "lat": 30.31242246361591,
+        "lng": -97.69295301259955
+      }
+    }
+  ]
+}

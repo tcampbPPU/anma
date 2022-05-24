@@ -35,6 +35,7 @@ export default defineNuxtConfig({
    * @see https://v3.nuxtjs.org/api/configuration/nuxt.config#modules
    */
    modules: [
+    '@nuxt/content',
     '@vueuse/nuxt',
     'nuxt-windicss',
   ],
@@ -55,6 +56,14 @@ export default defineNuxtConfig({
    */
    windicss: {
     analyze: false,
+  },
+
+  /**
+   * Nuxt Content configuration
+   * @see https://content-v2.nuxtjs.org/guide/writing/content-directory
+   */
+  content: {
+    //
   },
 
 })
