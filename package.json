@@ -11,7 +11,7 @@
   },
   "dependencies": {
     "vue": "3",
-    "vue3-google-map": "^0.11.0"
+    "vue3-google-map": "^0.12.0"
   },
   "devDependencies": {
     "@typescript-eslint/eslint-plugin": "^5.23.0",
