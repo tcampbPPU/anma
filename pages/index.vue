@@ -42,13 +42,13 @@
                 <span v-for="shop in filteredShop.shops" :key="shop.id">
                   <shop-marker :position="shop.position" :label="`${parseInt(shop.episode)}`">
                     <marker-window>
-                      <marker-modal :shop="shop" />
+                      <marker-modal :shop="shop" :address="shop.address" />
                     </marker-window>
                   </shop-marker>
                   <span v-for="marker, i in shop.other_locations" :key="i">
                     <shop-marker :position="marker.position" :label="`${parseInt(shop.episode)}`">
                       <marker-window>
-                        <marker-modal :shop="shop" />
+                        <marker-modal :shop="shop" :address="marker.address" />
                       </marker-window>
                     </shop-marker>
                   </span>
@@ -88,6 +88,10 @@ const episodes = [
   {
     id: 2,
     name: 'Episode 2',
+  },
+  {
+    id: 3,
+    name: 'Episode 3',
   },
 ]
 
@@ -147,6 +151,23 @@ const shops = [
       position: {
         lat: 30.31242246361591,
         lng: -97.69295301259955,
+      },
+    },
+  ],
+},
+{
+  id: 3,
+  episode: '003',
+  shops:[
+    {
+      id: 3,
+      order: 1,
+      episode: '003',
+      name: `Flightpath Coffeehouse`,
+      address: '5011 Duval St, Austin, TX 78751',
+      position: {
+        lat: 30.31377602732789,
+        lng: -97.71990647770498,
       },
     },
   ],

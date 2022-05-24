@@ -8,17 +8,20 @@
         {{ props.shop.name }}
       </p>
       <p>
-        {{ props.shop.address }}
+        {{ props.address }}
       </p>
     </div>
   </div>
 </template>
 <script lang="ts" setup>
 import { PropType } from '@vue/runtime-core'
-import ucFirst from '~/composables/ucFirst'
 const props = defineProps({
   shop: {
     type: Object as PropType<models.ShopItem>,
+    required: true,
+  },
+  address: {
+    type: String as PropType<string>,
     required: true,
   },
 })
