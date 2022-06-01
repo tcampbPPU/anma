@@ -184,7 +184,7 @@ const shops = [
       id: 4,
       order: 1,
       episode: '004',
-      name: `Flightpath Coffeehouse`,
+      name: 'Batch Craft Beer & Kolaches',
       address: '3220 Manor Road Austin, Texas 78723',
       position: {
         lat: 30.287164831367765,
