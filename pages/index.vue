@@ -87,6 +87,8 @@ const filter = ref<number|undefined>(undefined)
 const { data: episodes } = await useAsyncData('episodes', () => queryContent<models.Episode>('/episodes').only(['id', 'name']).find())
 const { data: shops } = await useAsyncData('markers', () => queryContent<models.Shop>('/markers').find())
 
+console.log(episodes.value)
+
 const setFilter = (id: number) => {
   if (filter.value === id)
     filter.value = undefined

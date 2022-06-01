@@ -4,9 +4,7 @@
       <div class="flex items-center justify-between w-full py-3 border-b border-indigo-500 lg:border-none">
         <div class="flex items-center">
           <div class="flex w-16 h-8">
-            <router-link to="/" class="flex-shrink-0">
-              <img src="/anma-large.png" alt="ANMA Logo" class="h-8">
-            </router-link>
+            <img src="/anma-large.png" alt="ANMA Logo" class="h-10">
           </div>
         </div>
         <div class="flex items-center justify-center space-x-4">

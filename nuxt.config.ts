@@ -60,7 +60,7 @@ export default defineNuxtConfig({
 
   /**
    * Nuxt Content configuration
-   * @see https://content-v2.nuxtjs.org/guide/writing/content-directory
+   * @see https://content.nuxtjs.org/guide/writing/content-directory
    */
   content: {
     //
