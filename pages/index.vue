@@ -93,6 +93,10 @@ const episodes = [
     id: 3,
     name: 'Episode 3',
   },
+  {
+    id: 4,
+    name: 'Episode 4',
+  },
 ]
 
 const themes = ['default', 'night', 'hazy', 'groovy', 'moonlight', 'minimal']
@@ -168,6 +172,23 @@ const shops = [
       position: {
         lat: 30.31377602732789,
         lng: -97.71990647770498,
+      },
+    },
+  ],
+},
+{
+  id: 4,
+  episode: '004',
+  shops:[
+    {
+      id: 4,
+      order: 1,
+      episode: '004',
+      name: `Flightpath Coffeehouse`,
+      address: '3220 Manor Road Austin, Texas 78723',
+      position: {
+        lat: 30.287164831367765,
+        lng: -97.70313164613975,
       },
     },
   ],
