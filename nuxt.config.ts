@@ -63,7 +63,10 @@ export default defineNuxtConfig({
    * @see https://content.nuxtjs.org/guide/writing/content-directory
    */
   content: {
-    //
+    highlight: {
+      // See the available themes on https://github.com/shikijs/shiki/blob/main/docs/themes.md#all-theme
+      theme: 'dracula',
+    },
   },
 
 })

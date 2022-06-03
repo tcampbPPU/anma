@@ -85,9 +85,7 @@ const theme = ref<'default'|'night'|'hazy'|'groovy'|'moonlight'|'minimal'>('defa
 const filter = ref<number|undefined>(undefined)
 
 const { data: episodes } = await useAsyncData('episodes', () => queryContent<models.Episode>('/episodes').only(['id', 'name']).find())
-const { data: shops } = await useAsyncData('markers', () => queryContent<models.Shop>('/markers').find())
-
-console.log(episodes.value)
+const { data: shops } = await useAsyncData('shops', () => queryContent<models.Shop>('/shops').find())
 
 const setFilter = (id: number) => {
   if (filter.value === id)
