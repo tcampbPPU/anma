@@ -80,28 +80,13 @@ const center = {
   lng: -97.74228103200021,
 }
 
-const episodes = [
-  {
-    id: 1,
-    name: 'Episode 1',
-  },
-  {
-    id: 2,
-    name: 'Episode 2',
-  },
-  {
-    id: 3,
-    name: 'Episode 3',
-  },
-  {
-    id: 4,
-    name: 'Episode 4',
-  },
-]
-
 const themes = ['default', 'night', 'hazy', 'groovy', 'moonlight', 'minimal']
 const theme = ref<'default'|'night'|'hazy'|'groovy'|'moonlight'|'minimal'>('default')
+
 const filter = ref<number|undefined>(undefined)
+
+const { data: episodes } = await useAsyncData('episodes', () => queryContent<models.Episode>('/episodes').only(['id', 'name']).find())
+const { data: shops } = await useAsyncData('shops', () => queryContent<models.Shop>('/shops').find())
 
 const setFilter = (id: number) => {
   if (filter.value === id)
@@ -110,95 +95,9 @@ const setFilter = (id: number) => {
     filter.value = id
 }
 
-const shops = [
-{
-  id: 1,
-  episode: '001',
-  shops: [
-    {
-      id: 1,
-      order: 1,
-      episode: '001',
-      name: 'Halcyon Coffee Bar',
-      address: '1905 Aldrich Street, #110 Austin, TX 78723',
-      position: {
-        lat: 30.29775802195116,
-        lng: -97.70535262534085,
-      },
-      rating: {
-        gus: '7.0',
-        geoff: '7.0',
-        average: '7.0',
-      },
-      other_locations: [
-        {
-          address: '218 W 4th St Austin, TX 78701',
-          position: {
-            lat: 30.267050890151644,
-            lng: -97.74563623008639,
-          },
-        },
-      ],
-    },
-  ],
-},
-{
-  id: 2,
-  episode: '002',
-  shops:[
-    {
-      id: 2,
-      order: 1,
-      episode: '002',
-      name: `Hank's Austin`,
-      address: '5811 Berkman Dr, Austin, TX 78723',
-      position: {
-        lat: 30.31242246361591,
-        lng: -97.69295301259955,
-      },
-    },
-  ],
-},
-{
-  id: 3,
-  episode: '003',
-  shops:[
-    {
-      id: 3,
-      order: 1,
-      episode: '003',
-      name: `Flightpath Coffeehouse`,
-      address: '5011 Duval St, Austin, TX 78751',
-      position: {
-        lat: 30.31377602732789,
-        lng: -97.71990647770498,
-      },
-    },
-  ],
-},
-{
-  id: 4,
-  episode: '004',
-  shops:[
-    {
-      id: 4,
-      order: 1,
-      episode: '004',
-      name: 'Batch Craft Beer & Kolaches',
-      address: '3220 Manor Road Austin, Texas 78723',
-      position: {
-        lat: 30.287164831367765,
-        lng: -97.70313164613975,
-      },
-    },
-  ],
-},
-] as models.Shops
-
 const filteredShops = computed((): models.Shops => {
   if (!filter.value)
-    return shops
-  return shops.filter(shop => shop.episode === filter.value.toString().padStart(3, '0'))
+    return shops.value
+  return shops.value.filter(shop => shop.episode === filter.value.toString().padStart(3, '0'))
 })
-
 </script>

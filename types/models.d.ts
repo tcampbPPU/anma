@@ -1,3 +1,5 @@
+import type { ParsedContent } from '@nuxt/content/dist/runtime/types'
+
 export {}
 declare global {
   export namespace models {
@@ -21,8 +23,9 @@ declare global {
       lng: float
     }
 
-    export interface Episode {
+    export interface Episode extends ParsedContent {
       id: number
+      name: string
       title: string
       episode: string|number
       year: number
@@ -31,7 +34,7 @@ declare global {
     }
     export type Episodes = Array<Episode>
 
-    export interface Shop {
+    export interface Shop extends ParsedContent {
       id: number
       episode: string
       shops: ShopItems

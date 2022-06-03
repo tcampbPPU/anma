@@ -1,0 +1,17 @@
+{
+  "id": 3,
+  "episode": "003",
+  "shops":[
+    {
+      "id": 3,
+      "order": 1,
+      "episode": "003",
+      "name": "Flightpath Coffeehouse",
+      "address": "5011 Duval St, Austin, TX 78751",
+      "position": {
+        "lat": 30.31377602732789,
+        "lng": -97.71990647770498
+      }
+    }
+  ]
+}

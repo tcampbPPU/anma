@@ -35,6 +35,7 @@ export default defineNuxtConfig({
    * @see https://v3.nuxtjs.org/api/configuration/nuxt.config#modules
    */
    modules: [
+    '@nuxt/content',
     '@vueuse/nuxt',
     'nuxt-windicss',
   ],
@@ -47,6 +48,13 @@ export default defineNuxtConfig({
       env: process.env.ENV || 'local',
       googleMapsApiKey: process.env.GOOGLE_MAP_API_KEY,
     },
+  },
+
+  /**
+   * @see https://content.nuxtjs.org/get-started
+   */
+  content: {
+    // https://content.nuxtjs.org/api/configuration
   },
 
   /**
