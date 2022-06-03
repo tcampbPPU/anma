@@ -51,6 +51,13 @@ export default defineNuxtConfig({
   },
 
   /**
+   * @see https://content.nuxtjs.org/get-started
+   */
+  content: {
+    // https://content.nuxtjs.org/api/configuration
+  },
+
+  /**
    * WindiCSS configuration
    * @see https://github.com/windicss/nuxt-windicss
    */

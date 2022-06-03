@@ -82,6 +82,7 @@ const center = {
 
 const themes = ['default', 'night', 'hazy', 'groovy', 'moonlight', 'minimal']
 const theme = ref<'default'|'night'|'hazy'|'groovy'|'moonlight'|'minimal'>('default')
+
 const filter = ref<number|undefined>(undefined)
 
 const { data: episodes } = await useAsyncData('episodes', () => queryContent<models.Episode>('/episodes').only(['id', 'name']).find())
@@ -99,5 +100,4 @@ const filteredShops = computed((): models.Shops => {
     return shops.value
   return shops.value.filter(shop => shop.episode === filter.value.toString().padStart(3, '0'))
 })
-
 </script>
