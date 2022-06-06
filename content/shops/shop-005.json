@@ -1,0 +1,17 @@
+{
+  "id": 5,
+  "episode": "005",
+  "shops":[
+    {
+      "id": 5,
+      "order": 1,
+      "episode": "005",
+      "name": "Thunderbird Coffee",
+      "address": "2200 Manor Rd, Austin, TX 78722",
+      "position": {
+        "lat": 30.284401649828645,
+        "lng": -97.7194324383773
+      }
+    }
+  ]
+}
