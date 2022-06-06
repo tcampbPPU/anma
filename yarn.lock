@@ -6210,10 +6210,10 @@ vue-router@^4.0.15:
   dependencies:
     "@vue/devtools-api" "^6.0.0"
 
-vue3-google-map@^0.12.0:
-  version "0.12.0"
-  resolved "https://registry.yarnpkg.com/vue3-google-map/-/vue3-google-map-0.12.0.tgz#8999e89b943bd066f24fa760a6099244d73293c3"
-  integrity sha512-A7WweMLd1eX1mUvyF41m86/pdiF/9V487y/RKv4FT2C/ziA5l81eItw9Q25g/ciSVW+4EmPGvbGBtB6chOUf/A==
+vue3-google-map@^0.13.0:
+  version "0.13.0"
+  resolved "https://registry.yarnpkg.com/vue3-google-map/-/vue3-google-map-0.13.0.tgz#c8bd0def26e0801222d65543b5a5922613b5b234"
+  integrity sha512-2Qk6JZV9hXwVvwLgCFYjh3sM/ehbnTG3kiDMcP9OOb3BqmD+5mpT2DftCvK1yZnMzGahpNhZKKvXMA5OAMDxog==
   dependencies:
     "@googlemaps/js-api-loader" "^1.12.11"
     "@googlemaps/markerclusterer" "^2.0.6"
