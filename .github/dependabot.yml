@@ -8,6 +8,6 @@ updates:
     assignees:
       - "tcampbPPU"
     labels:
-      - "pnpm"
+      - "yarn"
       - "dependencies"
     open-pull-requests-limit: 10

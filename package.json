@@ -15,7 +15,7 @@
   },
   "devDependencies": {
     "@nuxt/content": "^2.0.1",
-    "@typescript-eslint/eslint-plugin": "^5.27.0",
+    "@typescript-eslint/eslint-plugin": "^5.27.1",
     "@typescript-eslint/parser": "^5.27.1",
     "@vue/eslint-config-typescript": "^10.0.0",
     "@vueuse/nuxt": "^8.6.0",
