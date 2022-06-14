@@ -1,0 +1,33 @@
+{
+  "id": 6,
+  "episode": "006",
+  "shops": [
+    {
+      "id": 6,
+      "order": 1,
+      "episode": "006",
+      "name": "Epoch Coffee on North Loop",
+      "address": "221 W North Loop Blvd, Austin, Texas 78751",
+      "position": {
+        "lat": 30.318619350978565,
+        "lng": -97.7246035214715
+      },
+      "other_locations": [
+        {
+          "address": "2700 W Anderson Ln #409, Austin, TX 78757",
+          "position": {
+            "lat": 30.359444942096463,
+            "lng": -97.73476681027067
+          }
+        },
+        {
+          "address": "3900 Far West Blvd, Austin, TX 78731",
+          "position": {
+            "lat": 30.35733244543958,
+            "lng": -97.76067422631584
+          }
+        }
+      ]
+    }
+  ]
+}

@@ -37,7 +37,7 @@ export default defineNuxtConfig({
    modules: [
     '@nuxt/content',
     '@vueuse/nuxt',
-    'nuxt-windicss',
+    '@nuxtjs/tailwindcss',
   ],
 
   /**
