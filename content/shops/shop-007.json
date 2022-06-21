@@ -1,0 +1,33 @@
+{
+  "id": 7,
+  "episode": "007",
+  "shops": [
+    {
+      "id": 7,
+      "order": 1,
+      "episode": "007",
+      "name": "Bennu on MLK",
+      "address": "2001 E Martin Luther King Jr Blvd, Austin, TX 78702",
+      "position": {
+        "lat": 30.27980713657989,
+        "lng": -97.7196627204918
+      },
+      "other_locations": [
+        {
+          "address": "515 S Congress Ave, Austin, TX 78704",
+          "position": {
+            "lat": 30.256100159486234,
+            "lng": -97.74632854951177
+          }
+        },
+        {
+          "address": "109 Jacob Fontaine Ln suite 600, Austin, TX 78752",
+          "position": {
+            "lat": 30.32505386537499,
+            "lng": -97.71482113319956
+          }
+        }
+      ]
+    }
+  ]
+}
