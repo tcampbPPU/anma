@@ -11,7 +11,7 @@
   },
   "dependencies": {
     "vue": "3",
-    "vue3-google-map": "^0.13.2"
+    "vue3-google-map": "^0.14.0"
   },
   "devDependencies": {
     "@nuxt/content": "^2.0.1",
