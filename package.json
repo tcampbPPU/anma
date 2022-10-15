@@ -18,7 +18,7 @@
     "@nuxtjs/tailwindcss": "^5.3.5",
     "@tailwindcss/typography": "^0.5.7",
     "@typescript-eslint/eslint-plugin": "^5.39.0",
-    "@typescript-eslint/parser": "^5.39.0",
+    "@typescript-eslint/parser": "^5.40.0",
     "@vue/eslint-config-typescript": "^10.0.0",
     "@vueuse/nuxt": "^9.3.0",
     "eslint": "^8.24.0",
