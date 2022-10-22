@@ -15,7 +15,7 @@
   },
   "devDependencies": {
     "@nuxt/content": "^2.2.0",
-    "@nuxtjs/tailwindcss": "^5.3.5",
+    "@nuxtjs/tailwindcss": "^6.1.0",
     "@tailwindcss/typography": "^0.5.7",
     "@typescript-eslint/eslint-plugin": "^5.40.0",
     "@typescript-eslint/parser": "^5.40.0",
