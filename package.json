@@ -23,7 +23,7 @@
     "@vueuse/nuxt": "^10.0.2",
     "eslint": "^8.37.0",
     "eslint-plugin-vue": "^8.7.1",
-    "lottie-web": "^5.10.2",
+    "lottie-web": "^5.11.0",
     "nuxt": "^3.3.3",
     "typescript": "^5.0.4"
   }
