@@ -1222,7 +1222,7 @@
     unimport "^3.0.6"
     untyped "^1.3.2"
 
-"@nuxt/kit@3.4.3", "@nuxt/kit@^3.3.3", "@nuxt/kit@^3.4.2", "@nuxt/kit@^3.4.3":
+"@nuxt/kit@3.4.3", "@nuxt/kit@^3.3.3", "@nuxt/kit@^3.4.3":
   version "3.4.3"
   resolved "https://registry.yarnpkg.com/@nuxt/kit/-/kit-3.4.3.tgz#2ab6efb0a4db7b4e5f4d8d7d7e696fa30a6e8771"
   integrity sha512-aQyzplYFCL292UsVZzlOZOC51ZKYFL0PBihbcPzxTzXQvAfMF8/DQ539kqzqXzxTCcmnUB9ROhIaNUrAeUkFYA==
@@ -1365,22 +1365,23 @@
     vite-plugin-checker "^0.5.6"
     vue-bundle-renderer "^1.0.3"
 
-"@nuxtjs/tailwindcss@^6.6.7":
-  version "6.6.7"
-  resolved "https://registry.yarnpkg.com/@nuxtjs/tailwindcss/-/tailwindcss-6.6.7.tgz#1217e05afd5dbd7c63d0178c3d29df1b1abec33a"
-  integrity sha512-WxkvOH05YURffpPBjtHavwY/nu13+u90tTj2rHdTQ3CcvWcnKZ9e2q7NjIrz5sopkuRYNGtKnSZa3eA9iTk0Og==
+"@nuxtjs/tailwindcss@^6.6.8":
+  version "6.6.8"
+  resolved "https://registry.yarnpkg.com/@nuxtjs/tailwindcss/-/tailwindcss-6.6.8.tgz#d1d63487b43b9c011465942c044e0269a3c9ce05"
+  integrity sha512-U0wnBLFStrhpY1pqFOdro8AptXDsSFFjYEF5Rp306dbDlDs6ukZrnoDZQOAor/x+w12S7lUdQUN3j8L5YuXyKQ==
   dependencies:
-    "@nuxt/kit" "^3.4.2"
+    "@nuxt/kit" "^3.4.3"
     "@nuxt/postcss8" "^1.1.3"
     autoprefixer "^10.4.14"
     chokidar "^3.5.3"
     clear-module "^4.1.2"
     colorette "^2.0.20"
-    cookie-es "^0.5.0"
+    cookie-es "^1.0.0"
     defu "^6.1.2"
     destr "^1.2.2"
-    h3 "^1.6.4"
+    h3 "^1.6.5"
     iron-webcrypto "^0.7.0"
+    minimatch "^9.0.0"
     pathe "^1.1.0"
     postcss "^8.4.23"
     postcss-custom-properties "^13.1.5"
@@ -1388,7 +1389,7 @@
     radix3 "^1.0.1"
     tailwind-config-viewer "^1.7.2"
     tailwindcss "~3.3.2"
-    ufo "^1.1.1"
+    ufo "^1.1.2"
     uncrypto "^0.1.2"
 
 "@rollup/plugin-alias@^5.0.0":
@@ -3774,20 +3775,7 @@ gzip-size@^7.0.0:
   dependencies:
     duplexer "^0.1.2"
 
-h3@^1.6.4:
-  version "1.6.4"
-  resolved "https://registry.yarnpkg.com/h3/-/h3-1.6.4.tgz#0575995014f6a1a63ff3bbfe3eaf58da0972b9e8"
-  integrity sha512-uoDNeaoeDRwWBtwwi4siZ6l5sBmDJpnpcBssuAbvsaPBonl8vP7Ym4tFPe+tAvGM0GbUoC24wYcloCG+J9hqmA==
-  dependencies:
-    cookie-es "^0.5.0"
-    defu "^6.1.2"
-    destr "^1.2.2"
-    iron-webcrypto "^0.6.0"
-    radix3 "^1.0.1"
-    ufo "^1.1.1"
-    uncrypto "^0.1.2"
-
-h3@^1.6.5:
+h3@^1.6.4, h3@^1.6.5:
   version "1.6.5"
   resolved "https://registry.yarnpkg.com/h3/-/h3-1.6.5.tgz#0836ffb87aa4a557871e02bdcf6116f41f7240fc"
   integrity sha512-A0r2LCDzeavSfcAbJpMwHXLcSN0H3FpEZtYigbz4IYun0fOE8r6vy3galwubAnmc6gXVob4261zXQsu3sZayzg==
@@ -4130,11 +4118,6 @@ ip-regex@^5.0.0:
   version "5.0.0"
   resolved "https://registry.yarnpkg.com/ip-regex/-/ip-regex-5.0.0.tgz#cd313b2ae9c80c07bd3851e12bf4fa4dc5480632"
   integrity sha512-fOCG6lhoKKakwv+C6KdsOnGvgXnmgfmp0myi3bcNwj3qfwPAxRKWEuFhvEFF7ceYIz6+1jRZ+yguLFAmUNPEfw==
-
-iron-webcrypto@^0.6.0:
-  version "0.6.0"
-  resolved "https://registry.yarnpkg.com/iron-webcrypto/-/iron-webcrypto-0.6.0.tgz#3e597930b41363fc81a6ec415d25eb5000092144"
-  integrity sha512-WYgEQttulX/+JTv1BTJFYY3OsAb+ZnCuA53IjppZMyiRsVdGeEuZ/k4fJrg77Rzn0pp9/PgWtXUF+5HndDA5SQ==
 
 iron-webcrypto@^0.7.0:
   version "0.7.0"
@@ -5253,6 +5236,13 @@ minimatch@^5.0.1:
   version "5.1.0"
   resolved "https://registry.yarnpkg.com/minimatch/-/minimatch-5.1.0.tgz#1717b464f4971b144f6aabe8f2d0b8e4511e09c7"
   integrity sha512-9TPBGGak4nHfGZsPBohm9AWg6NoT7QTCehS3BIJABslyZbzxfV78QM2Y6+i741OPZIafFAaiiEMh5OyIrJPgtg==
+  dependencies:
+    brace-expansion "^2.0.1"
+
+minimatch@^9.0.0:
+  version "9.0.0"
+  resolved "https://registry.yarnpkg.com/minimatch/-/minimatch-9.0.0.tgz#bfc8e88a1c40ffd40c172ddac3decb8451503b56"
+  integrity sha512-0jJj8AvgKqWN05mrwuqi8QYKx1WmYSUoKSxu5Qhs9prezTz10sxAHGNZe9J9cqIJzta8DWsleh2KaVaLl6Ru2w==
   dependencies:
     brace-expansion "^2.0.1"
 
@@ -7255,12 +7245,7 @@ typescript@^5.0.4:
   resolved "https://registry.yarnpkg.com/typescript/-/typescript-5.0.4.tgz#b217fd20119bd61a94d4011274e0ab369058da3b"
   integrity sha512-cW9T5W9xY37cc+jfEnaUvX91foxtHkza3Nw3wkoF4sSlKn0MONdkdEndig/qPBWXNkmplh3NzayQzCiHM4/hqw==
 
-ufo@^1.0.0, ufo@^1.1.0, ufo@^1.1.1:
-  version "1.1.1"
-  resolved "https://registry.yarnpkg.com/ufo/-/ufo-1.1.1.tgz#e70265e7152f3aba425bd013d150b2cdf4056d7c"
-  integrity sha512-MvlCc4GHrmZdAllBc0iUDowff36Q9Ndw/UzqmEKyrfSzokTd9ZCy1i+IIk5hrYKkjoYVQyNbrw7/F8XJ2rEwTg==
-
-ufo@^1.1.2:
+ufo@^1.0.0, ufo@^1.1.0, ufo@^1.1.1, ufo@^1.1.2:
   version "1.1.2"
   resolved "https://registry.yarnpkg.com/ufo/-/ufo-1.1.2.tgz#d0d9e0fa09dece0c31ffd57bd363f030a35cfe76"
   integrity sha512-TrY6DsjTQQgyS3E3dBaOXf0TpPD8u9FVrVYmKVegJuFw51n/YB9XPt+U6ydzFG5ZIN7+DIjPbNmXoBj9esYhgQ==
