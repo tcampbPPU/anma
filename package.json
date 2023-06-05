@@ -25,6 +25,6 @@
     "eslint-plugin-vue": "^8.7.1",
     "lottie-web": "^5.11.0",
     "nuxt": "^3.5.2",
-    "typescript": "^5.0.4"
+    "typescript": "^5.1.3"
   }
 }
