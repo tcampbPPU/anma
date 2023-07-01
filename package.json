@@ -20,7 +20,7 @@
     "@typescript-eslint/eslint-plugin": "^5.60.0",
     "@typescript-eslint/parser": "^5.60.0",
     "@vue/eslint-config-typescript": "^10.0.0",
-    "@vueuse/nuxt": "^10.2.0",
+    "@vueuse/nuxt": "^10.2.1",
     "eslint": "^8.43.0",
     "eslint-plugin-vue": "^8.7.1",
     "lottie-web": "^5.12.0",
